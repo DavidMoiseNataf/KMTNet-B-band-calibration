@@ -11,7 +11,7 @@ For every frame and chip (K, M, N, T) the notebook `KMTNet_B_calibration.ipynb`
 1. plate-solves the catalogue with astrometry.net and refines the solution against Gaia (TAN-SIP);
 2. matches the detections to Gaia DR3 (0.5", proper motions propagated to the epoch);
 3. computes reference magnitudes $B_{\rm K}$ (AB) from the Gaia XP spectra of the matched stars through the system passband,
-   filter transmission times the measured QE of the chip;
+   filter transmission times the mean measured QE of the four chips;
 4. fits ${\rm MAG} - B_{\rm K} = a_0 + a_c\Delta c + a_{c^2}\Delta c^2 + a(x,y) + a_{\rm amp}$ with $\Delta c = (G_{\rm BP}-G_{\rm RP}) - 1.5$,
    five spatial terms and eight amplifier offsets, by iteratively clipped least squares;
 5. writes a calibrated catalogue of every detection, with its Gaia match, $B_{\rm K}$, a predicted Johnson $B$
